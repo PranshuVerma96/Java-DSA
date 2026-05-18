@@ -4,7 +4,7 @@ public class PrintDigitOfNumber {
             int digit = num % 10;
             //System.out.println(digit);
 
-//            last digit ko remove karta 
+//            last digit ko remove karta he
             num = num /10;
         }
     }
