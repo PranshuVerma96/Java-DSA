@@ -1,0 +1,118 @@
+// Types of Inheritance in Java
+
+// ---------------------------
+// 1. Single Inheritance
+// ---------------------------
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+// ---------------------------
+// 2. Multilevel Inheritance
+// ---------------------------
+class Grandfather {
+    void house() {
+        System.out.println("Grandfather has a house");
+    }
+}
+
+class Father extends Grandfather {
+    void car() {
+        System.out.println("Father has a car");
+    }
+}
+
+class Son extends Father {
+    void bike() {
+        System.out.println("Son has a bike");
+    }
+}
+
+// ---------------------------
+// 3. Hierarchical Inheritance
+// ---------------------------
+class Shape {
+    void display() {
+        System.out.println("This is a shape");
+    }
+}
+
+class Circle extends Shape {
+    void circleArea() {
+        System.out.println("Circle area method");
+    }
+}
+
+class Rectangle extends Shape {
+    void rectangleArea() {
+        System.out.println("Rectangle area method");
+    }
+}
+
+// ---------------------------
+// 4. Multiple Inheritance
+// Java does not support multiple inheritance with classes
+// But it supports through interfaces
+// ---------------------------
+interface A {
+    void show();
+}
+
+interface B {
+    void print();
+}
+
+class Demo implements A, B {
+    public void show() {
+        System.out.println("Show method from A");
+    }
+
+    public void print() {
+        System.out.println("Print method from B");
+    }
+}
+
+// ---------------------------
+// Main Class
+// ---------------------------
+public class InheritanceTypes {
+    public static void main(String[] args) {
+
+        // Single Inheritance
+        System.out.println("Single Inheritance:");
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+
+        // Multilevel Inheritance
+        System.out.println("\nMultilevel Inheritance:");
+        Son s = new Son();
+        s.house();
+        s.car();
+        s.bike();
+
+        // Hierarchical Inheritance
+        System.out.println("\nHierarchical Inheritance:");
+        Circle c = new Circle();
+        c.display();
+        c.circleArea();
+
+        Rectangle r = new Rectangle();
+        r.display();
+        r.rectangleArea();
+
+        // Multiple Inheritance using Interface
+        System.out.println("\nMultiple Inheritance using Interface:");
+        Demo obj = new Demo();
+        obj.show();
+        obj.print();
+    }
+}
