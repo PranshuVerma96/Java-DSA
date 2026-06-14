@@ -5,9 +5,9 @@ public class SetExample {
     public static void main(String[] args) {
 
         HashSet<Student> set = new HashSet<>();
-        Student s1 = new Student(1,"PRanshu");
-        Student s2 = new Student(1,"PRanshu");
-        Student s3 = new Student(1,"PRanshu");
+        Student s1 = new Student(1,"PRanshu", 90);
+        Student s2 = new Student(1,"PRanshu", 90);
+        Student s3 = new Student(1,"PRanshu", 90);
 
         set.add(s1);
         set.add(s2);
