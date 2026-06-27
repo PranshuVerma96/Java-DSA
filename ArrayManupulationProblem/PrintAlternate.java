@@ -1,6 +1,7 @@
 public class PrintAlternate {
     static void printAlternate (int arr[]){
 //        time complexity = o(n)
+//         space complexity= o(1)
         int n = arr.length;
         int start = 0;
         int end = n-1;
