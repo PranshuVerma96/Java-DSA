@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-
+//this is array list code 
 public class SumOfEachColumnIn2dArray {
     static List<Integer> columnSums(int arr[] []){
         List<Integer> result = new ArrayList<>();
