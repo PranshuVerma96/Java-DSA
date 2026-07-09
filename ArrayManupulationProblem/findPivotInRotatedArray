@@ -1,0 +1,33 @@
+public class FindPivotIndexARotatedArray {
+    static int findPivot(int arr[]){
+        int start = 0;
+        int n = arr.length;
+        int end = n-1;
+        int ans = -1;
+
+        // check first case
+        if(arr[start] < arr[end]){
+            return  -1;
+        }
+        while (start <= end){
+            // find mid
+            int mid = start + (end - start)/2;
+            if(arr[mid] < arr[n-1]){
+                // element in the left part than move
+                end = mid -1;
+            }
+            else {
+//                check if(arr[mid] > arr[n-1)
+                ans = mid;
+                start = mid + 1;
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {1,2,3,4,5};
+        int result = findPivot(arr);
+        System.out.println(result);
+    }
+}
