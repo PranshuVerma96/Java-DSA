@@ -6,7 +6,7 @@ public class AddAllElementDivideBy10 {
             mul*= i;
         }
 
-//        print all element
+//      print all element
         System.out.println();
         for (int i : arr){
             System.out.print(i + " ");
