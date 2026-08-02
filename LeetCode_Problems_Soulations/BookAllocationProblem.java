@@ -1,6 +1,6 @@
 public class BookAllocationProblem {
 
-    static boolean isValidAnswer(int arr[], int k , int maxPares){
+    static boolean isValidAnswer(int arr[], int k ,int maxPares){
         // check wherter mixPages is avalid soultion or not
         int studentCount = 1;
         int pages = 0;
