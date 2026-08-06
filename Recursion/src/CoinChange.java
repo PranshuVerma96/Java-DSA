@@ -8,7 +8,7 @@ public class CoinChangeII {
             // invalid case
             return Integer.MAX_VALUE;
         }
-        // ab mare passe amount he sare coin to try karuga
+        //ab mare passe amount he sare coin to try karuga
         // ad find the min coin count
 
         int min = Integer.MAX_VALUE;
