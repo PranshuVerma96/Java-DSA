@@ -7,7 +7,7 @@ public class RatInMaze {
         if(newX <0 || newX>=n || newY <0 || newY >=n){
             return false;  // safe nahi he
         }
-        // blocked cell bala case
+        //. blocked cell bala case
         else if(maze[newX][newY] == 0){
             // iska matlab cell block he app nahi ja sakte
             return false;
