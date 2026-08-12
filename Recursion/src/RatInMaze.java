@@ -5,7 +5,7 @@ public class RatInMaze {
     static boolean isSafeToMove(int newX, int newY,int n, int maze[][], boolean visited[][]){
         // out of bound bala case
         if(newX <0 || newX>=n || newY <0 || newY >=n){
-            return false; // safe nahi he
+            return false;  // safe nahi he
         }
         // blocked cell bala case
         else if(maze[newX][newY] == 0){
