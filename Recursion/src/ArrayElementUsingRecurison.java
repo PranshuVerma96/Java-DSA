@@ -1,6 +1,6 @@
 public class ArrayElementUsingRecurison {
     static  void printArrayElement(int arr[] , int index){
-        // base case
+        //base case
         if(index == arr.length){
             return;
         }
