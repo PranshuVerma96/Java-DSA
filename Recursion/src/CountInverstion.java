@@ -1,6 +1,6 @@
 public class CountInversion {
     static int merge(int arr[],int s, int e, int mid){
-        //. left Array and right Arry create kiye the
+        //.left Array and right Arry create kiye the
         // jisme hume original array se values copy ki thi
         int leftArrLen = mid -s+1;
         int rightArrLen = e-mid;
