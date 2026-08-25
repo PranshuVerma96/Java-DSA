@@ -70,7 +70,7 @@ public class SinglyLinkedList {
             insertAtTail(data);
             return;
         }
-        //  middle me karhin per insert karna he
+        // middle me karhin per insert karna he
 
         Node prevNode = head;
         // move preNode by position -2 steps to rech to the preious node of the destion location
