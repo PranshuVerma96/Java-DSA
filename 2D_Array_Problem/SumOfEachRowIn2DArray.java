@@ -7,7 +7,7 @@ public class SumOfEachRowIn2DArray {
 
         int m = arr.length;
         int n = arr[0].length;
-//        traversal
+//       traversal
         for(int row =0;  row<m; row++){
             int sum = 0;
             for(int col = 0; col<n; col++){
