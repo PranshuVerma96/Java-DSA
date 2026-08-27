@@ -34,4 +34,4 @@ public class SumOfEachRowIn2DArray {
     }
 }
 
-//time Complexity = o(m*n)
+// time Complexity = o(m*n)
