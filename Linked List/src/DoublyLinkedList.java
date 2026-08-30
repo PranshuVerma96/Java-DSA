@@ -58,6 +58,22 @@ public class DoublyLinkedList {
 
 
     // insert at tail
+    public void insertAtTail(int data){
+        Node newNode = new Node(data);
+        if(head == null && tail == null){
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            newNode.prev = tail;
+            tail.next = newNode;
+            // update tail
+            tail = newNode;
+
+        }
+        // 1 node add hu he
+        size++;
+    }
 
 
     // insert at anyPosition
