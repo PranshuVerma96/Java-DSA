@@ -39,6 +39,22 @@ public class DoublyLinkedList {
     //================================
 
     // insert at head
+     public void inserAtHead(int data){
+        Node newNode = new Node(data);
+        // if liked list is empty head and tail ko newNode pr point kardo
+        if(head == null  && tail == null){
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            newNode.next = head;
+           head.prev = newNode;
+           // head update
+            head = newNode;
+        }
+        // increase the size by 1
+        size++;
+    }
 
 
     // insert at tail
