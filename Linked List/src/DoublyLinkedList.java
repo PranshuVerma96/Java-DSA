@@ -34,23 +34,12 @@ public class DoublyLinkedList {
         }
         System.out.println();
     }
-
-    // print backword
-    public void printBackword(){
-        Node temp = tail;
-        while (temp != null){
-            System.out.print( " <-"+ temp.data);
-            temp = temp.prev;
-        }
-        System.out.println();
-    }
-    
     //================================
     // Insertion
     //================================
 
     // insert at head
-     public void inserAtHead(int data){
+    public void inserAtHead(int data){
         Node newNode = new Node(data);
         // if liked list is empty head and tail ko newNode pr point kardo
         if(head == null  && tail == null){
@@ -59,8 +48,8 @@ public class DoublyLinkedList {
         }
         else {
             newNode.next = head;
-           head.prev = newNode;
-           // head update
+            head.prev = newNode;
+            // head update
             head = newNode;
         }
         // increase the size by 1
@@ -88,7 +77,7 @@ public class DoublyLinkedList {
 
 
     // insert at anyPosition
-    
+
     public void insertAtPosition(int position , int data){
         if(position <1 && position > size+1){
             System.out.println("Invalid position to Insert node");
@@ -127,7 +116,18 @@ public class DoublyLinkedList {
         size++;
     }
 
-       //=========================
+    // print backword
+    public void printBackword(){
+        Node temp = tail;
+        while (temp != null){
+            System.out.print( " <-"+ temp.data);
+            temp = temp.prev;
+        }
+        System.out.println();
+    }
+
+
+    //=========================
     // Searching
     //=========================
 
@@ -146,7 +146,7 @@ public class DoublyLinkedList {
         return false;
     }
 
-     //========================
+    //========================
     // Update
     //========================
 
@@ -162,7 +162,8 @@ public class DoublyLinkedList {
         }
     }
 
-     //========================
+
+    //========================
     // Deletion
     //========================
 
@@ -188,7 +189,7 @@ public class DoublyLinkedList {
         size--;
     }
 
-        public void deleteAtTail(){
+    public void deleteAtTail(){
         if(head == null){
             System.out.println("the List is empty");
             return;
@@ -218,7 +219,7 @@ public class DoublyLinkedList {
         size--;
     }
 
-      public  void deleteAtPosition(int position){
+    public  void deleteAtPosition(int position){
         if(position < 0 && position > size+1){
             System.out.println("Invalid Position ");
             return;
@@ -252,7 +253,6 @@ public class DoublyLinkedList {
         // update size
         size--;
     }
-
     public static void main(String[] args) {
         DoublyLinkedList myList = new DoublyLinkedList();
         myList.inserAtHead(40);
@@ -268,6 +268,22 @@ public class DoublyLinkedList {
         myList.insertAtTail(50);
         myList.printList();
 
+        myList.insertAtPosition(3, 500);
+        myList.printList();
 
+        myList.printBackword();
+        System.out.println(myList.searchInLL(500));
+
+        myList.updateElement(500, 600);
+        myList.printList();
+
+        myList.deleteAtHead();
+        myList.printList();
+
+        myList.deleteAtTail();
+        myList.printList();
+
+        myList.deleteAtPosition(2);
+        myList.printList();
     }
 }
