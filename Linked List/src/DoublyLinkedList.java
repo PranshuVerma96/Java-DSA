@@ -188,6 +188,35 @@ public class DoublyLinkedList {
         size--;
     }
 
+        public void deleteAtTail(){
+        if(head == null){
+            System.out.println("the List is empty");
+            return;
+        }
+
+        // single node
+        if (head == tail){
+            head = null;
+            tail = null;
+
+            // ya sab bhual jate he
+            size =0;
+            return;
+        }
+        //LL has more than 1 nod e
+        Node currNode = tail;
+        Node preNode = tail.prev;
+
+        // link change
+        preNode.next = null;
+        currNode.prev = null;
+
+        // update tail
+        tail = preNode;
+
+        // size update karp
+        size--;
+    }
 
     public static void main(String[] args) {
         DoublyLinkedList myList = new DoublyLinkedList();
