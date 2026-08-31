@@ -34,6 +34,17 @@ public class DoublyLinkedList {
         }
         System.out.println();
     }
+
+    // print backword
+    public void printBackword(){
+        Node temp = tail;
+        while (temp != null){
+            System.out.print( " <-"+ temp.data);
+            temp = temp.prev;
+        }
+        System.out.println();
+    }
+    
     //================================
     // Insertion
     //================================
