@@ -162,6 +162,32 @@ public class DoublyLinkedList {
         }
     }
 
+     //========================
+    // Deletion
+    //========================
+
+    public void deleteAtHead(){
+        if(head == null){
+            System.out.println("Linked list is empty");
+            return;
+        }
+
+        // single node
+        if(head == tail){
+            head =null;
+            tail = null;
+            size =0;
+            // ye sab buhal jatt ehe
+        }
+
+        // LL has more than 1 node'
+        head = head.next;
+        head.prev = null;
+
+        // size update
+        size--;
+    }
+
 
     public static void main(String[] args) {
         DoublyLinkedList myList = new DoublyLinkedList();
