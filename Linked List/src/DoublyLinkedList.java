@@ -146,6 +146,22 @@ public class DoublyLinkedList {
         return false;
     }
 
+     //========================
+    // Update
+    //========================
+
+    public void updateElement(int oldValue ,int newValue){
+        Node temp = head;
+        while (temp != null){
+            if(temp.data == oldValue){
+                temp.data = newValue;
+            }
+            else {
+                temp = temp.next;
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
         DoublyLinkedList myList = new DoublyLinkedList();
