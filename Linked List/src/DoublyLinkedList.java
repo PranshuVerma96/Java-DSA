@@ -127,6 +127,25 @@ public class DoublyLinkedList {
         size++;
     }
 
+       //=========================
+    // Searching
+    //=========================
+
+    public boolean searchInLL(int target){
+        if (head == null){
+            System.out.println("No node inside linked list");
+        }
+        Node temp = head;
+        while (temp != null){
+            if (temp.data == target){
+                return true;
+            }else {
+                temp = temp.next;
+            }
+        }
+        return false;
+    }
+
 
     public static void main(String[] args) {
         DoublyLinkedList myList = new DoublyLinkedList();
