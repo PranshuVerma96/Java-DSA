@@ -218,6 +218,41 @@ public class DoublyLinkedList {
         size--;
     }
 
+      public  void deleteAtPosition(int position){
+        if(position < 0 && position > size+1){
+            System.out.println("Invalid Position ");
+            return;
+        }
+        if(head == null){
+            System.out.println("No need to  delete ");
+            return;
+        }
+        if(position ==1){
+            deleteAtHead();
+            return;
+        }
+        if(position == size){
+            deleteAtTail();
+            return;
+        }
+        // Koi in between vali postion delete karna he
+        Node currNode = head;
+        for(int i=1; i<=position-1; i++){
+            currNode = currNode.next;
+        }
+        Node preNode = currNode.prev;
+        Node nextNode = currNode.next;
+
+        // change function
+        preNode.next = nextNode;
+        nextNode.prev = preNode;
+        currNode.prev = null;
+        currNode.next = null;
+
+        // update size
+        size--;
+    }
+
     public static void main(String[] args) {
         DoublyLinkedList myList = new DoublyLinkedList();
         myList.inserAtHead(40);
