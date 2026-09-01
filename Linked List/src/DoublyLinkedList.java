@@ -4,7 +4,7 @@ public class DoublyLinkedList {
         Node prev;
         Node next;
 
-        //constructor
+        // constructor
         Node(int data){
             this.data = data;
             this.next = null;
