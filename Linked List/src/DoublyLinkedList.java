@@ -41,8 +41,8 @@ public class DoublyLinkedList {
     // insert at head
     public void inserAtHead(int data){
         Node newNode = new Node(data);
-        // if liked list is empty head and tail ko newNode pr point kardo
-        if(head == null  && tail == null){
+        // if liked list is empty head and  tail ko newNode pr point kardo
+         if(head == null  && tail == null){
             head = newNode;
             tail = newNode;
         }
