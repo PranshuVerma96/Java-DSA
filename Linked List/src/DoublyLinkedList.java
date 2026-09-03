@@ -12,7 +12,7 @@ public class DoublyLinkedList {
         }
     }
     //data member
-    private Node head;
+    pr ivate Node head;
     private Node tail;
     private int size;
 
