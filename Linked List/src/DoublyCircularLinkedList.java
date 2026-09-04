@@ -177,6 +177,40 @@ public class DoublyCircularLinkedList {
         return size;
     }
 
+      //===============================
+    // Deletion
+    //===============================
+
+    // Deletion At head
+    public void deleteHead(){
+        // Case 1 Empty linked list
+        if(head == null){
+            System.out.println("Can not deleted empty linked list");
+            return;
+        }
+        // case 2 only one node
+        if (head == tail){
+            head = null;
+            tail = null;
+            size = 0;
+            return;
+        }
+
+        // Step 3 more than one node
+        Node temp = head;
+        // Move to forword
+        head = head.next;
+
+        temp.next = null;
+        temp.prev = null;
+
+        head.prev = tail;
+        tail.next = head;
+
+
+        size--;
+    }
+
     public static void main(String[] args) {
         DoublyCircularLinkedList list = new DoublyCircularLinkedList();
         list.insertAtHead(20);
