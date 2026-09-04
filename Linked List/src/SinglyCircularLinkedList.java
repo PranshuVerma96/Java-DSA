@@ -160,6 +160,49 @@ public class SinglyCircularLinkedList {
         size--;
     }
 
+/ Delete tail
+    public void deleteTail(){
+        // case 1 Empty linked list
+        if(head == null){
+            System.out.println("Circular linked list is empty ");
+            return;
+        }
+        //case 2 Only one node
+        if(head == tail){
+            head = null;
+            tail = null;
+            size =0;
+            return;
+        }
+
+//        Node current = head;
+//
+//        //Reach second last node
+//        while (current.next != tail){
+//            current = current.next;
+//        }
+//        Node temp = tail;
+//        tail = current;
+//
+//        // Maintain curcular connection
+//        tail.next = head;
+//
+//        // Disconnect deleted node
+//        temp.next = null;
+
+        Node prevNode = head;
+        for(int i=1; i<= size-2; i++){
+            prevNode = prevNode.next;
+        }
+
+        prevNode.next = head;
+        tail.next = null;
+        tail = prevNode;
+
+
+
+        size--;
+    }
 
 
     public static void main(String[] args) {
