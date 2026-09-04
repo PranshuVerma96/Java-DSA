@@ -158,7 +158,7 @@ public class DoublyCircularLinkedList {
 
     }
 
-     // Search
+    // Search
     public boolean search(int target){
         if(head == null){
             return false;
@@ -172,12 +172,13 @@ public class DoublyCircularLinkedList {
         }while (current != head);
         return false;
     }
+
     // getSize
     public int getSize(){
         return size;
     }
 
-      //===============================
+    //===============================
     // Deletion
     //===============================
 
@@ -211,7 +212,7 @@ public class DoublyCircularLinkedList {
         size--;
     }
 
-     // Deletion At Tail
+    // Deletion At Tail
 
     public void deleteTail(){
         // Step 1 Empty Linked List
@@ -241,7 +242,7 @@ public class DoublyCircularLinkedList {
 
     }
 
-        // Delete At position
+    // Delete At position
     public void deleteAtPosition(int position){
         // Step 1 Empty linked list
         if(position <1 || position >size+1){
@@ -282,13 +283,22 @@ public class DoublyCircularLinkedList {
         // Step 3 more than
     }
 
+
+
     public static void main(String[] args) {
         DoublyCircularLinkedList list = new DoublyCircularLinkedList();
         list.insertAtHead(20);
         list.insertAtHead(30);
         list.insertAtTail(40);
         list.insertAtPosition(2,45);
-        list.printBackward();
+//        list.printBackward();
+
+        list.deleteAtPosition(2);
+//        list.deleteHead();
+//        list.deleteTail();
         list.printForward();
+
+//        System.out.println(list.search(30));
+//        System.out.println(list.getSize());
     }
 }
