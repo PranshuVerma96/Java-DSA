@@ -14,7 +14,7 @@ public class SinglyCircularLinkedList {
     private Node tail;
     private int size;
 
-     public SinglyCircularLinkedList() {
+    public SinglyCircularLinkedList() {
         head = null;
         tail = null;
         size = 0;
@@ -46,7 +46,8 @@ public class SinglyCircularLinkedList {
         // size increase
         size++;
     }
-     // Insertion At Tail
+
+    // Insertion At Tail
     public void insertAtTail(int data) {
         Node newNode = new Node(data);
 
@@ -117,7 +118,7 @@ public class SinglyCircularLinkedList {
         System.out.println("Back to head");
     }
 
-// Search List
+    // Search List
     public boolean search(int target){
         // Empty List
         if(head == null){
@@ -134,7 +135,8 @@ public class SinglyCircularLinkedList {
         return false;
     }
 
-     //==============================
+
+    //==============================
     // Deletion
     //==============================
 
@@ -160,7 +162,7 @@ public class SinglyCircularLinkedList {
         size--;
     }
 
-/ Delete tail
+    // Delete tail
     public void deleteTail(){
         // case 1 Empty linked list
         if(head == null){
@@ -203,6 +205,43 @@ public class SinglyCircularLinkedList {
 
         size--;
     }
+
+    // Delete At Position
+    public void deleteAtPosition(int position){
+        // valid Position(1 to size)
+        if(position < 1 || position >size){
+            System.out.println("Invalid Position");
+            return;
+        }
+        // Delete head
+        if(position == 1){
+            deletionAtHead();
+            return;
+        }
+        // Delete tail
+        if(position == size){
+            deleteTail();
+            return;
+        }
+        // Reach node before the node to be deleted
+        Node prvNode = head;
+
+        for (int i=1; i<=position-2; i++){
+            prvNode = prvNode.next;
+        }
+        Node currNode = prvNode.next;
+        Node nextNode = currNode.next;
+
+        prvNode.next =nextNode;
+
+        // Disconnect deleted note
+//        currNode.next = null;
+     currNode.next = null;
+        size--;
+
+    }
+
+
 
 
     public static void main(String[] args) {
