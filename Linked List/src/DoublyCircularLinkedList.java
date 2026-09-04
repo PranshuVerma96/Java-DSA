@@ -172,6 +172,10 @@ public class DoublyCircularLinkedList {
         }while (current != head);
         return false;
     }
+    // getSize
+    public int getSize(){
+        return size;
+    }
 
     public static void main(String[] args) {
         DoublyCircularLinkedList list = new DoublyCircularLinkedList();
