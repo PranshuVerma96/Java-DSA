@@ -211,6 +211,35 @@ public class DoublyCircularLinkedList {
         size--;
     }
 
+     // Deletion At Tail
+
+    public void deleteTail(){
+        // Step 1 Empty Linked List
+        if(head == null){
+            System.out.println("Can not deleted empty linked list");
+            return;
+        }
+        // Step 2 only one node
+        if(head == tail){
+            head = null;
+            tail = null;
+            size = 0;
+            return;
+        }
+        // Step 3 one more than node
+        Node preNode = tail.prev;
+        // Disconnect
+        tail.prev = null;
+        tail.next = null;
+
+        // circular connection
+        tail = preNode;
+      tail.next = head;
+        head.prev = tail;
+
+        size--;
+
+    }
     public static void main(String[] args) {
         DoublyCircularLinkedList list = new DoublyCircularLinkedList();
         list.insertAtHead(20);
