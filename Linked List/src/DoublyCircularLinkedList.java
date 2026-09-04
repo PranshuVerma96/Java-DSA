@@ -85,3 +85,36 @@ public class DoublyCircularLinkedList {
         }
         size++;
     }
+
+    // Insertion At Position
+    public  void insertAtPosition(int position , int data){
+        // Valid position
+        if(position < 1 || position >size+ 1){
+            System.out.println("Invalid postion ");
+            return;
+        }
+        if(position == 1){
+            insertAtHead(data);
+            return;
+        }
+        if(position ==size+1){
+            insertAtTail(data);
+            return;
+        }
+        Node preNode = head;
+        for(int i =1; i<=position-2; i++){
+            preNode = preNode.next;
+        }
+        Node curNode = new Node(data);
+        Node nextNode = preNode.next;
+
+        preNode.next = curNode;
+        curNode.prev = preNode;
+
+        nextNode.prev = curNode;
+        curNode.next = nextNode;
+
+        size++;
+
+    }
+
