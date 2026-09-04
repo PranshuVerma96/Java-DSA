@@ -20,6 +20,33 @@ public class SinglyCircularLinkedList {
         size = 0;
     }
 
+    //========================================================
+    //Insertion
+    //=======================================================
+
+    //Insertion At Head
+    public void insertAtHead(int data) {
+        Node newNode = new Node(data);
+
+        // case 1 linked list is empty
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+
+            // circular correction
+            tail.next = head;
+        } else {
+            newNode.next = head;
+            head = newNode;
+
+            // Maintain circular connection
+            tail.next = head;
+        }
+
+        // size increase
+        size++;
+    }
+
 
     public static void main(String[] args) {
         SinglyCircularLinkedList myList = new SinglyCircularLinkedList();
