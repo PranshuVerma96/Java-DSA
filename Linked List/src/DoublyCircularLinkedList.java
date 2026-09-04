@@ -1,4 +1,3 @@
-
 public class DoublyCircularLinkedList {
     static class Node{
         int data;
@@ -22,7 +21,7 @@ public class DoublyCircularLinkedList {
         size = 0;
     }
 
-     //============================
+    //============================
     // Insertion
     //============================
 
@@ -58,7 +57,8 @@ public class DoublyCircularLinkedList {
         }
 
     }
-  // Insertion At tail
+
+    // Insertion At tail
     public void insertAtTail(int data){
         Node newNode = new Node(data);
 
@@ -117,7 +117,9 @@ public class DoublyCircularLinkedList {
         size++;
 
     }
- public  void printForward(){
+
+    // Print List
+    public  void printForward(){
         if (head == null){
             System.out.println("Doubly circular linked list is empty");
             return;
@@ -136,7 +138,7 @@ public class DoublyCircularLinkedList {
         System.out.println(" <-> (Back to Head) ");
     }
 
-public  void printBackward(){
+    public  void printBackward(){
         if (tail == null){
             System.out.println("Doubly circular linked list is empty");
             return;
@@ -155,3 +157,14 @@ public  void printBackward(){
         System.out.println(" <-> (Back to Head) ");
 
     }
+
+    public static void main(String[] args) {
+        DoublyCircularLinkedList list = new DoublyCircularLinkedList();
+        list.insertAtHead(20);
+        list.insertAtHead(30);
+        list.insertAtTail(40);
+        list.insertAtPosition(2,45);
+        list.printBackward();
+        list.printForward();
+    }
+}
