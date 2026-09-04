@@ -58,3 +58,30 @@ public class DoublyCircularLinkedList {
         }
 
     }
+  // Insertion At tail
+    public void insertAtTail(int data){
+        Node newNode = new Node(data);
+
+        // case 1 Empty list
+        if(head == null){
+            head = newNode;
+            tail = newNode;
+
+            head.prev = tail;
+            tail.next = head;
+        }
+
+        // case 2 Non empty linked list
+        else {
+            newNode.prev = tail;
+            newNode.next = head;
+
+            tail.next = newNode;
+            head.prev = newNode;
+
+            tail = newNode;
+
+
+        }
+        size++;
+    }
