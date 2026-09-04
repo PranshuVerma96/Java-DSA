@@ -158,6 +158,21 @@ public class DoublyCircularLinkedList {
 
     }
 
+     // Search
+    public boolean search(int target){
+        if(head == null){
+            return false;
+        }
+        Node current = head;
+        do{
+            if(current.data == target){
+                return true;
+            }
+            current = current.next;
+        }while (current != head);
+        return false;
+    }
+
     public static void main(String[] args) {
         DoublyCircularLinkedList list = new DoublyCircularLinkedList();
         list.insertAtHead(20);
