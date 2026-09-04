@@ -240,6 +240,48 @@ public class DoublyCircularLinkedList {
         size--;
 
     }
+
+        // Delete At position
+    public void deleteAtPosition(int position){
+        // Step 1 Empty linked list
+        if(position <1 || position >size+1){
+            return;
+        }
+        if(head == null){
+            System.out.println("can not delete ");
+            return;
+        }
+
+        if(position ==1){
+            deleteHead();
+            return;
+        }
+
+        Node preNode = head;
+        for(int i=1; i <= position-2; i++){
+            preNode = preNode.next;
+        }
+        Node currNode = preNode.next;
+        Node nextNode = currNode.next;
+
+        currNode.prev = null;
+        size--;
+        // dekete tauk
+        if (position == size){
+            deleteHead();
+        }
+        // one node is exist
+        if(head == tail){
+            head = null;
+            tail = null;
+
+            size--;
+            return;
+        }
+
+        // Step 3 more than
+    }
+
     public static void main(String[] args) {
         DoublyCircularLinkedList list = new DoublyCircularLinkedList();
         list.insertAtHead(20);
