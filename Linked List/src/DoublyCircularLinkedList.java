@@ -135,3 +135,23 @@ public class DoublyCircularLinkedList {
         } while (current!= head);
         System.out.println(" <-> (Back to Head) ");
     }
+
+public  void printBackward(){
+        if (tail == null){
+            System.out.println("Doubly circular linked list is empty");
+            return;
+        }
+        Node current = tail;
+
+        do {
+            System.out.print(current.data);
+            current = current.prev;
+
+            if(current !=tail){
+                System.out.print(" <-> ");
+            }
+
+        } while (current!= tail);
+        System.out.println(" <-> (Back to Head) ");
+
+    }
