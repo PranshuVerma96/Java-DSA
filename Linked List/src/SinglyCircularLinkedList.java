@@ -117,6 +117,23 @@ public class SinglyCircularLinkedList {
         System.out.println("Back to head");
     }
 
+// Search List
+    public boolean search(int target){
+        // Empty List
+        if(head == null){
+            return false;
+        }
+        Node current = head;
+        do{
+            if(current.data == target){
+                return true;
+            }
+            current = current.next;
+        }
+        while (current != head);
+        return false;
+    }
+
 
 
     public static void main(String[] args) {
