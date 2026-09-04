@@ -65,6 +65,58 @@ public class SinglyCircularLinkedList {
         size++;
     }
 
+    // Insertion At Position
+    public void insertAtPosition(int position, int data) {
+        // check invalid postion
+        if (position < 1 && position > size + 1) {
+            System.out.println("Invalid position can't insert");
+            return;
+        }
+        if (position == 1) {
+            insertAtHead(data);
+            return;
+        }
+        if (position == size + 1) {
+            insertAtTail(data);
+            return;
+        }
+
+        // in sab ke alawa koi poistion ho to
+        Node newNode = new Node(data);
+
+        // Reach node before insertion position
+        Node prevNode = head;
+
+        for (int i = 1; i <= position - 2; i++) {
+            prevNode = prevNode.next;
+        }
+//     newNode.next = previous.next;
+//     previous.next = newNode;
+
+        Node currNode = newNode;
+        Node nextNode = prevNode.next;
+
+        prevNode.next = currNode;
+        currNode.next = nextNode;
+        size++;
+
+    }
+
+    // Print List
+    public void printList() {
+        if (head == null) {
+            System.out.println("Circular Linked List is empty");
+            return;
+        }
+        Node current = head;
+
+        do {
+            System.out.print(current.data + "->");
+            current = current.next;
+        } while (current != head);
+        System.out.println("Back to head");
+    }
+
 
 
     public static void main(String[] args) {
