@@ -134,6 +134,32 @@ public class SinglyCircularLinkedList {
         return false;
     }
 
+     //==============================
+    // Deletion
+    //==============================
+
+    public void deletionAtHead(){
+        // Case 1 Empty Linked List
+        if(head == null){
+            System.out.println("Circular List is empty");
+            return;
+        }
+        // case 2 only one node
+        if(head == tail){
+            head = null;
+            tail= null;
+            size = 0;
+            return;
+        }
+        Node temp = head;
+        head = head.next;
+
+        //Maintain Circular connection
+        tail.next = head;
+
+        size--;
+    }
+
 
 
     public static void main(String[] args) {
