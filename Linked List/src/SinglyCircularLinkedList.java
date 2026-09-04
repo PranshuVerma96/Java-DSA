@@ -46,6 +46,25 @@ public class SinglyCircularLinkedList {
         // size increase
         size++;
     }
+     // Insertion At Tail
+    public void insertAtTail(int data) {
+        Node newNode = new Node(data);
+
+        // Case 1 Empty linked list
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+            tail.next = head;
+        }
+        // case 2 Non empty linked list
+        else {
+            tail.next = newNode;
+            tail = newNode;
+            tail.next = head;
+        }
+        size++;
+    }
+
 
 
     public static void main(String[] args) {
