@@ -14,7 +14,11 @@ public class SinglyCircularLinkedList {
     private Node tail;
     private int size;
 
- 
+     public SinglyCircularLinkedList() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
 
 
     public static void main(String[] args) {
