@@ -117,4 +117,21 @@ public class DoublyCircularLinkedList {
         size++;
 
     }
+ public  void printForward(){
+        if (head == null){
+            System.out.println("Doubly circular linked list is empty");
+            return;
+        }
+        Node current = head;
 
+        do {
+            System.out.print(current.data);
+            current = current.next;
+
+            if(current !=head){
+                System.out.print(" <-> ");
+            }
+
+        } while (current!= head);
+        System.out.println(" <-> (Back to Head) ");
+    }
