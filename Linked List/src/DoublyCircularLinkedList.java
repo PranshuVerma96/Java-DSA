@@ -71,7 +71,7 @@ public class DoublyCircularLinkedList {
             tail.next = head;
         }
 
-        // case 2 Non empty linked list
+        //case 2 Non empty linked list
         else {
             newNode.prev = tail;
             newNode.next = head;
