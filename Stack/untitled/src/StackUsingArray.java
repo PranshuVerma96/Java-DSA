@@ -13,7 +13,7 @@ public class StackUsingArray {
         this.arr = new int[capacity];
         this.top = -1;
     }
-    // number fuctions
+    //number fuctions
     public void push(int value){
         if(top == capacity-1){
             System.out.println("Can not inserted Element  STack Overflow");
