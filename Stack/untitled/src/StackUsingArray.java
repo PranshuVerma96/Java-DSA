@@ -38,7 +38,7 @@ public class StackUsingArray {
 
 
     }
-    // getSize
+    //getSize
 
     public int getSize(){
         // current nomber of element
