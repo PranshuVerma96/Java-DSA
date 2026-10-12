@@ -3,7 +3,6 @@ package StackUsingArray;
 public class StackUsingArray {
     
     // data members
-
     private int [] arr;
     private int capacity;
     private int top;
