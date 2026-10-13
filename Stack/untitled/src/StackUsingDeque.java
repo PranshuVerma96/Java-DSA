@@ -3,7 +3,8 @@ import java.util.Deque;
 
 public class StackUsingDeque {
     public static void main(String[] args) {
-//        inslize the stack using deque
+//      
+ inslize the stack using deque
 
         Deque<Integer> st = new ArrayDeque<>();
 
