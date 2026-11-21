@@ -27,6 +27,7 @@ public class StackUsingArray {
     }
 
     // pop
+
     public void pop(){
         if(top == -1){
             System.out.println("Can not Delete Stack Underflow");
