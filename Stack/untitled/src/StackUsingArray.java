@@ -8,6 +8,7 @@ public class StackUsingArray {
     private int top;
 
     //  constructor
+
     public StackUsingArray(int capacity){
         this.capacity = capacity;
         this.arr = new int[capacity];
